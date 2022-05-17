@@ -1,9 +1,9 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import Modal from './Modal';
+import Modal from '../ModalMovie/ModalMovie';
 
-export default function CardRecipe(props) {
+export default function MovieCard(props) {
     const [show, setShow] = useState(false);
     const [choosenCard,setChoosenCard] = useState();
     
@@ -16,11 +16,11 @@ export default function CardRecipe(props) {
     return (
       <>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={props.recipe.image} />
+          <Card.Img variant="top" src={props.results.image} />
           <Card.Body>
-            <Card.Title>{props.recipe.title}</Card.Title>
-            <Card.Text>{props.recipe.summary}</Card.Text>
-            <Card.Text>{props.recipe.readyInMinutes} Minutes</Card.Text>
+            <Card.Title>{props.results.title}</Card.Title>
+            <Card.Text>{props.results.summary}</Card.Text>
+            <Card.Text>{props.results.readyInMinutes} Minutes</Card.Text>
 
             <Button
               variant="primary"

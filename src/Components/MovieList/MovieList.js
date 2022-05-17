@@ -1,13 +1,12 @@
-import CardRecipe from './Card';
-
-export default  function Cards(props) {
+import MovieCard from "../Movie/Movie"
+export default  function MovieList(props) {
     return (
         <>
             {
-            props.recipes.map((recipe)=>{
+            props.recipes.map((results)=>{
                 return (
                   <>
-                    <CardRecipe recipe={recipe} />
+                    <MovieCard results={results} />
                   </>
                 );
             })
